@@ -2,6 +2,7 @@ const Web3 = require("web3");
 const truffleContract = require("@truffle/contract");
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 // Connect to Ganache
 const web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
@@ -14,6 +15,7 @@ const Storage = truffleContract(storageJSON);
 Storage.setProvider(web3.currentProvider);
 
 const app = express();
+app.use(cors()); // Enable CORS with a wildcard origin
 app.use(bodyParser.json());
 
 app.post("/store", async (req, res) => {
