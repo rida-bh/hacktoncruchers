@@ -10,7 +10,6 @@ contract Treatments {
         string description;
         string startDate;
         string endDate;
-        uint patientId;
     }
 
     mapping(address => Treatment[]) private treatments;

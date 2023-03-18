@@ -24,7 +24,7 @@ contract PatientHealthData {
 // Fonction pour ajouter un nouveau patient
 function addPatient(string memory _name, string memory _dob, string memory _gender, string memory _address, string memory _phoneNumber, string memory _email) public {
 patientsCount ++;
-patients[patientsCount] = Patient(patientsCount, _name, _dob, _gender, _address, _phoneNumber, _email, new uint, new uint, new uint, new uint, new uint);
+patients[patientsCount] = Patient(patientsCount, _name, _dob, _gender, _address, _phoneNumber, _email, new uint[](0), new uint[](0), new uint[](0), new uint[](0), new uint[](0));
 }
 
 // Fonction pour ajouter de nouvelles données médicales à un patient existant

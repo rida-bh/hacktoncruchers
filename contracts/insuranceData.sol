@@ -10,7 +10,6 @@ contract InsuranceData {
         uint policyNumber;
         string expirationDate;
         uint coverageLimit;
-        uint patientId;
     }
 
     mapping(address => Insurance) private insuranceData;

@@ -10,7 +10,6 @@ contract Consultations {
         string doctorName;
         string diagnosis;
         string prescription;
-        uint patientId;
     }
 
     mapping(address => Consultation[]) private consultations;

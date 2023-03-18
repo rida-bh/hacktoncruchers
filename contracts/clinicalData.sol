@@ -9,7 +9,6 @@ contract MedicalHistory {
         string diagnosis;
         string treatment;
         string date;
-        uint patientId;
     }
 
     mapping(address => MedicalRecord[]) private medicalHistories;
